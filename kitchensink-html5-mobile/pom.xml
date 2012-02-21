@@ -212,6 +212,24 @@ given to the generated war, and hence the context root) -->
                     <strictCheck>true</strictCheck>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>ro.isdc.wro4j</groupId>
+                <artifactId>wro4j-maven-plugin</artifactId>
+                <version>${wro4j.version}</version>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <targetGroups>all</targetGroups>
+                    <destinationFolder>${basedir}/src/main/webapp/wro/</destinationFolder>
+                    <contextFolder>${basedir}/src/main/webapp/</contextFolder>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
