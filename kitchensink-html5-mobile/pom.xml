@@ -39,6 +39,8 @@ to work with JBoss EAP 6. It requires you have access to the JBoss EAP 6 maven r
         <!--
         <javaee6.spec.version>3.0.0.Beta1-redhat-1</javaee6.spec.version>
         -->
+
+        <wro4j.version>1.4.4</wro4j.version>
     </properties>
 
     <dependencyManagement>
