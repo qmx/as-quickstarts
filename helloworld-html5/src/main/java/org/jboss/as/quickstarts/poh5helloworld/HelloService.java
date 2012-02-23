@@ -16,16 +16,27 @@
  */
 package org.jboss.as.quickstarts.poh5helloworld;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * A simple CDI service which is able to say hello to someone
- * 
+ *
  * @author Pete Muir
- * 
  */
 public class HelloService {
 
-   String createHelloMessage(String name) {
-      return "Hello " + name + "!";
-   }
+    private Map<String, String> messages = new HashMap<String, String>();
 
+    String createHelloMessage(String name) {
+        return "Hello " + name + "!";
+    }
+
+    public void storeMessage(String name, String message) {
+        messages.put(name, message);
+    }
+
+    public String getMessage(String name) {
+        return messages.get(name);
+    }
 }
